@@ -95,27 +95,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navbar sticky al hacer scroll
     const navbar = document.querySelector('nav');
     const navbarHeight = navbar ? navbar.offsetHeight : 0;
-    let lastScrollTop = 0;
-
+    
+    // Aplicar sticky navbar desde el inicio
+    if (navbar) {
+        navbar.classList.add('sticky');
+        navbar.style.borderRadius = '0';
+    }
+    
+    // Simplemente mantenemos el navbar fijo, sin cambios al hacer scroll
     window.addEventListener('scroll', function() {
-        if (navbar) {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            // Añadir clase sticky cuando se hace scroll hacia abajo
-            if (scrollTop > navbarHeight && scrollTop > lastScrollTop) {
-                navbar.classList.add('sticky');
-                // Asegurarnos que el navbar no tenga bordes redondeados
-                navbar.style.borderRadius = '0';
-            } 
-            // Opcional: quitar la clase sticky cuando se hace scroll hacia arriba
-            else if (scrollTop < lastScrollTop - 10) {
-                navbar.classList.remove('sticky');
-                // Restaurar los estilos originales
-                navbar.style.borderRadius = '0';
-            }
-            
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        }
+        // No hacemos nada con el scroll, el navbar se mantiene fijo
     });
 
     // Asegurar que todas las secciones y elementos sean visibles por defecto
