@@ -104,10 +104,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // Añadir clase sticky cuando se hace scroll hacia abajo
             if (scrollTop > navbarHeight && scrollTop > lastScrollTop) {
                 navbar.classList.add('sticky');
+                // Asegurarnos que el navbar no tenga bordes redondeados
+                navbar.style.borderRadius = '0';
             } 
             // Opcional: quitar la clase sticky cuando se hace scroll hacia arriba
             else if (scrollTop < lastScrollTop - 10) {
                 navbar.classList.remove('sticky');
+                // Restaurar los estilos originales
+                navbar.style.borderRadius = '0';
             }
             
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
