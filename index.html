@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damaris Lugo | Corredora de Seguros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981', // Tono verde esmeralda moderno
+                        'primary-dark': '#059669', 
+                        'primary-light': '#a7f3d0',
+                        'neutral-dark': '#1f2937',
+                        'neutral-light': '#f9fafb'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white">
+    <!-- Navbar -->
+    <nav class="bg-white text-neutral-dark shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-neutral-dark">Damaris Lugo | Corredora de Seguros</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#sobre-mi" class="hover:text-primary transition duration-300">Sobre Mí</a>
+                    <a href="#servicios" class="hover:text-primary transition duration-300">Servicios</a>
+                    <a href="#tipos-seguros" class="hover:text-primary transition duration-300">Tipos de Seguros</a>
+                    <a href="#importancia" class="hover:text-primary transition duration-300">Importancia</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://wa.me/50767812767" target="_blank" class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded-full flex items-center transition duration-300 btn-whatsapp">
+                        <i class="fab fa-whatsapp mr-2"></i> <span class="hidden sm:inline">Contactar</span>
+                    </a>
+                    <button id="menu-toggle" class="md:hidden text-neutral-dark focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden shadow-lg">
+            <div class="px-4 py-3 space-y-3 bg-gray-50">
+                <a href="#sobre-mi" class="block px-3 py-2 hover:bg-gray-100 rounded-lg transition duration-300 flex items-center">
+                    <i class="fas fa-user mr-2"></i> Sobre Mí
+                </a>
+                <a href="#servicios" class="block px-3 py-2 hover:bg-gray-100 rounded-lg transition duration-300 flex items-center">
+                    <i class="fas fa-cogs mr-2"></i> Servicios
+                </a>
+                <a href="#tipos-seguros" class="block px-3 py-2 hover:bg-gray-100 rounded-lg transition duration-300 flex items-center">
+                    <i class="fas fa-shield-alt mr-2"></i> Tipos de Seguros
+                </a>
+                <a href="#importancia" class="block px-3 py-2 hover:bg-gray-100 rounded-lg transition duration-300 flex items-center">
+                    <i class="fas fa-info-circle mr-2"></i> Importancia
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-hero-pattern text-white">
+        <div class="container mx-auto px-4 py-24 flex flex-col items-center text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Protegiendo lo que más valoras</h1>
+            <p class="text-xl mb-10">Soluciones de seguros personalizadas para ti y tu familia</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="tel:+50767812767" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full text-lg flex items-center transition duration-300 btn-llamada">
+                    <i class="fas fa-phone-alt mr-2 text-2xl"></i> Llamar Ahora
+                </a>
+                <a href="https://wa.me/50767812767" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg flex items-center transition duration-300 btn-whatsapp">
+                    <i class="fab fa-whatsapp mr-2 text-2xl"></i> Consulta Gratis
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre Mi Section -->
+    <section id="sobre-mi" class="py-16 bg-white section-hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-neutral-dark animate-element">Sobre Mí</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-6 md:mb-0 animate-element profile-image-container">
+                    <img src="./img/image.png" alt="Foto de Damaris Lugo" class="rounded-full w-64 h-64 mx-auto object-cover shadow-lg profile-image">
+                </div>
+                <div class="md:w-2/3 md:pl-10">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary animate-element">Damaris Lugo</h3>
+                    <p class="text-gray-700 mb-4 animate-element">
+                        Con más de 15 años de experiencia en el sector de seguros, me dedico a encontrar las mejores opciones para mis clientes, garantizando la protección que necesitan en cada etapa de su vida.
+                    </p>
+                    <p class="text-gray-700 mb-4 animate-element">
+                        Mi compromiso es ofrecer un servicio personalizado y cercano, entendiendo las necesidades específicas de cada persona y empresa para brindar asesoría de calidad.
+                    </p>
+                    <div class="flex space-x-4 animate-element">
+                        <a href="mailto:damarislugo@hotmail.com" class="text-primary hover:text-primary-dark"><i class="far fa-envelope text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-16 bg-gray-50 section-hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-neutral-dark animate-element">Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-element">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-neutral-dark">Análisis de Necesidades</h3>
+                    <p class="text-gray-700">Evaluamos tu situación actual para entender exactamente qué tipo de protección necesitas.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-element">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-neutral-dark">Cotización Personalizada</h3>
+                    <p class="text-gray-700">Buscamos entre múltiples aseguradoras para encontrar la mejor opción que se ajuste a tu presupuesto.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 animate-element">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-neutral-dark">Acompañamiento en Siniestros</h3>
+                    <p class="text-gray-700">Te apoyamos durante todo el proceso de reclamación, facilitando los trámites con la aseguradora.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tipos de Seguros Section -->
+    <section id="tipos-seguros" class="py-16 bg-white section-hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-neutral-dark animate-element">Tipos de Seguros</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:bg-primary-light transition duration-300 animate-element">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Seguros de Auto</h3>
+                    <p class="text-gray-700">Protección completa para tu vehículo contra accidentes, robos y daños a terceros.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:bg-primary-light transition duration-300 animate-element">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Seguros de Hogar</h3>
+                    <p class="text-gray-700">Tranquilidad para tu familia con coberturas para tu vivienda y contenido.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:bg-primary-light transition duration-300 animate-element">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Seguros de Salud</h3>
+                    <p class="text-gray-700">Acceso a la mejor atención médica cuando más lo necesitas.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:bg-primary-light transition duration-300 animate-element">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Seguros de Vida</h3>
+                    <p class="text-gray-700">Protección financiera para tus seres queridos cuando ya no estés.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:bg-primary-light transition duration-300 animate-element">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Seguros Empresariales</h3>
+                    <p class="text-gray-700">Soluciones integrales para proteger tu negocio de imprevistos.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:bg-primary-light transition duration-300 animate-element">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Seguros de Viaje</h3>
+                    <p class="text-gray-700">Viaja con la tranquilidad de estar protegido en cualquier destino.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:bg-primary-light transition duration-300 animate-element">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Seguros Educativos</h3>
+                    <p class="text-gray-700">Asegura el futuro académico de tus hijos con planes de ahorro especializados.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:bg-primary-light transition duration-300 animate-element">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Planes de Ahorro</h3>
+                    <p class="text-gray-700">Combina protección con inversión para alcanzar tus metas financieras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Importancia Section -->
+    <section id="importancia" class="py-16 bg-gray-50 section-hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-neutral-dark animate-element">Importancia de los Seguros</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md animate-element">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">¿Por qué necesitas un seguro?</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start animate-element">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-700">Protección financiera ante eventos inesperados</span>
+                        </li>
+                        <li class="flex items-start animate-element">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-700">Tranquilidad para ti y tu familia</span>
+                        </li>
+                        <li class="flex items-start animate-element">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-700">Cumplimiento de obligaciones legales</span>
+                        </li>
+                        <li class="flex items-start animate-element">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-700">Planificación financiera a largo plazo</span>
+                        </li>
+                        <li class="flex items-start animate-element">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-700">Minimización de riesgos económicos</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md animate-element">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Beneficios de contar con un corredor</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start animate-element">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-700">Asesoría imparcial y personalizada</span>
+                        </li>
+                        <li class="flex items-start animate-element">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-700">Comparación entre múltiples compañías aseguradoras</span>
+                        </li>
+                        <li class="flex items-start animate-element">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-700">Ahorro de tiempo y dinero</span>
+                        </li>
+                        <li class="flex items-start animate-element">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-700">Apoyo durante la reclamación de siniestros</span>
+                        </li>
+                        <li class="flex items-start animate-element">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span class="text-gray-700">Actualización constante de tus coberturas según tus necesidades</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 bg-hero-pattern text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">¿Listo para proteger lo que más valoras?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contáctame hoy mismo para una consulta gratuita y descubre las mejores opciones de seguros que Damaris Lugo puede ofrecerte.</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="tel:+50767812767" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full text-lg inline-flex items-center transition duration-300 btn-llamada">
+                    <i class="fas fa-phone-alt mr-2 text-2xl"></i> Llamar Ahora
+                </a>
+                <a href="https://wa.me/50767812767" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center transition duration-300 btn-whatsapp">
+                    <i class="fab fa-whatsapp mr-2 text-2xl"></i> Contáctame por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-dark text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Damaris Lugo | Corredora de Seguros</h3>
+                    <p class="mb-4">Soluciones en seguros personalizadas para tus necesidades específicas.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-primary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-primary"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contacto</h3>
+                    <p class="flex items-center mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Av. Principal 123, Ciudad</p>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-phone mr-2"></i> 
+                        <a href="tel:+50767812767" class="hover:text-primary transition duration-300">+507 6781-2767</a>
+                    </p>
+                    <p class="flex items-center mb-2"><i class="fas fa-envelope mr-2"></i> damarislugo@hotmail.com</p>
+                    <div class="flex space-x-3 mt-4">
+                        <a href="tel:+50767812767" class="bg-white hover:bg-gray-100 text-primary font-bold py-2 px-4 rounded-full flex items-center transition duration-300 text-sm btn-llamada">
+                            <i class="fas fa-phone-alt mr-2"></i> Llamar
+                        </a>
+                        <a href="https://wa.me/50767812767" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full flex items-center transition duration-300 text-sm btn-whatsapp">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p>&copy; 2023 Damaris Lugo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,439 @@
+/* Estilos adicionales para la página web de corredora de seguros */
+
+/* Variables de colores modernos */
+:root {
+  --color-primary: #10b981;
+  --color-primary-dark: #059669;
+  --color-primary-light: #a7f3d0;
+  --color-neutral-dark: #1f2937;
+  --color-neutral-light: #f9fafb;
+  --color-white: #ffffff;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+}
+
+/* Animaciones para elementos al hacer hover */
+.hover-grow {
+  transition: transform 0.8s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animación moderna para la imagen de perfil */
+.profile-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  transition: transform 1s ease, filter 0.8s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0) 0%, rgba(16, 185, 129, 0.5) 100%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.8s ease;
+  border-radius: 50%;
+}
+
+.profile-image-container::after {
+  content: '15+ años de experiencia';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  z-index: 2;
+  width: 100%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.profile-image-container:hover .profile-image {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+.profile-image-container:hover::before {
+  opacity: 1;
+}
+
+.profile-image-container:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Efecto mejorado para elementos con hover */
+.item-hover-effect {
+  transition: all 0.8s ease !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.item-hover-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(16, 185, 129, 0.05);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.8s ease;
+  border-radius: inherit;
+}
+
+.item-hover-effect:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+  z-index: 2;
+}
+
+.item-hover-effect:hover::before {
+  opacity: 1;
+}
+
+/* Efectos específicos para elementos de la sección de importancia */
+#importancia li {
+  transition: all 0.8s ease;
+  padding: 10px !important;
+  border-radius: 8px;
+}
+
+#importancia li:hover {
+  transform: scale(1.08);
+  background-color: rgba(16, 185, 129, 0.05);
+  padding-left: 15px !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#importancia li:hover i {
+  transform: scale(1.2);
+  color: var(--color-primary) !important;
+}
+
+#importancia li i {
+  transition: all 0.8s ease;
+}
+
+/* Estilos para imágenes de fondo */
+.bg-hero-pattern {
+  background-image: url('./img/seguros.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.bg-hero-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 185, 129, 0.55); /* Tono verde más transparente para ver mejor la imagen */
+  z-index: 0;
+}
+
+.bg-hero-pattern > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Sombras personalizadas */
+.shadow-custom {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+}
+
+/* Efectos para tarjetas */
+.card-effect {
+  transition: all 0.8s ease !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-effect:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+}
+
+/* Estilo personalizado para botones */
+.btn-whatsapp {
+  transition: all 0.8s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo personalizado para el botón de llamada */
+.btn-llamada {
+  transition: all 0.8s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-llamada:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Animación pulsante para los botones de contacto */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Cambio de color gradual en hover para ambos botones */
+a[href^="tel:"], a[href^="https://wa.me"] {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+
+a[href^="tel:"]:hover, a[href^="https://wa.me"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+a[href^="tel:"]:after, a[href^="https://wa.me"]:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+a[href^="tel:"]:hover:after, a[href^="https://wa.me"]:hover:after {
+  opacity: 1;
+}
+
+/* Aplicar animación pulsante a los botones en el hero y CTA */
+.bg-hero-pattern a[href^="tel:"], 
+.bg-hero-pattern a[href^="https://wa.me"] {
+  animation: pulse 2s infinite;
+  animation-delay: 0.5s;
+}
+
+/* Estilos para el menú móvil */
+#mobile-menu {
+  transition: all 0.4s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 12px 12px;
+}
+
+#mobile-menu.active {
+  max-height: 300px;
+  opacity: 1;
+}
+
+#mobile-menu a {
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#mobile-menu.active a {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#mobile-menu.active a:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+#mobile-menu.active a:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+#mobile-menu.active a:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+#mobile-menu.active a:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* Estilos para el botón de menú móvil */
+#menu-toggle {
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#menu-toggle:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+/* Estilos para navegación sticky */
+nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  animation: slideDown 0.5s ease;
+  background-color: white !important;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para las secciones - Aseguramos que todas sean visibles por defecto */
+.section-hidden {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Estilos para elementos animados - Aseguramos que todos sean visibles por defecto */
+.animate-element {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Efecto sutil para enlaces del menú */
+nav a {
+  position: relative;
+  transition: color 0.8s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width 0.8s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Efecto sutil para imágenes */
+img {
+  transition: transform 0.8s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+/* Ajustes para tarjetas modernas */
+.bg-white {
+  border-radius: 12px;
+}
+
+.rounded-lg {
+  border-radius: 12px;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .py-24 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+  
+  .py-16 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  .gap-8 {
+    gap: 1rem !important;
+  }
+  
+  .profile-image-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .item-hover-effect:hover {
+    transform: scale(1.05) !important;
+  }
+} 
