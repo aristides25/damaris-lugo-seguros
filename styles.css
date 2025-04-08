@@ -36,8 +36,8 @@ html {
   overflow: hidden;
   border-radius: 50%;
   cursor: pointer;
-  width: 260px;
-  height: 260px;
+  width: 312px;
+  height: 312px;
   margin: 0;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   aspect-ratio: 1 / 1; /* Asegura que el contenedor sea cuadrado */
@@ -561,8 +561,8 @@ img:hover {
   }
   
   .profile-image-container {
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
     aspect-ratio: 1 / 1; /* Asegura que el contenedor sea cuadrado en móvil */
     display: block;
   }
@@ -584,10 +584,10 @@ img:hover {
   .profile-image-container {
     border-radius: 50%;
     overflow: hidden;
-    width: 260px;
-    height: 260px;
-    max-width: 260px;
-    max-height: 260px;
+    width: 312px;
+    height: 312px;
+    max-width: 312px;
+    max-height: 312px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 }
@@ -608,4 +608,12 @@ header.bg-hero-pattern {
   overflow: visible;
   position: relative;
   z-index: 1;
+  margin-bottom: 1.5rem; /* Asegura espacio adecuado debajo de la imagen */
+}
+
+/* Ajuste para móvil y tablet */
+@media (max-width: 768px) {
+  .md\:w-1\/3.mb-6 {
+    margin-bottom: 2rem !important; /* Espacio adicional en móvil */
+  }
 } 
