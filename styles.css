@@ -190,24 +190,105 @@ html {
 
 /* Estilo personalizado para botones */
 .btn-whatsapp {
-  transition: all 0.8s ease;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transform-origin: center;
 }
 
 .btn-whatsapp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Efectos de brillo al hover */
+.btn-whatsapp:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.8s ease;
+  z-index: -1;
+}
+
+.btn-whatsapp:hover:before {
+  opacity: 1;
+  transform: rotate(45deg) translateX(100%);
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Efectos al hacer clic */
+.btn-whatsapp:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 8px 15px -5px rgba(0, 0, 0, 0.1), 0 5px 5px -5px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
 }
 
 /* Estilo personalizado para el botón de llamada */
 .btn-llamada {
-  transition: all 0.8s ease;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transform-origin: center;
 }
 
 .btn-llamada:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Efectos de brillo al hover */
+.btn-llamada:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.8s ease;
+  z-index: -1;
+}
+
+.btn-llamada:hover:before {
+  opacity: 1;
+  transform: rotate(45deg) translateX(100%);
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Efectos al hacer clic */
+.btn-llamada:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 8px 15px -5px rgba(0, 0, 0, 0.1), 0 5px 5px -5px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+/* Efectos para botones del footer (más pequeños) */
+footer .btn-llamada, footer .btn-whatsapp {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+footer .btn-llamada:hover, footer .btn-whatsapp:hover {
+  transform: translateY(-3px) scale(1.05);
 }
 
 /* Animación pulsante para los botones de contacto */
@@ -227,12 +308,12 @@ html {
 a[href^="tel:"], a[href^="https://wa.me"] {
   position: relative;
   overflow: hidden;
-  transition: all 0.8s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 a[href^="tel:"]:hover, a[href^="https://wa.me"]:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
 }
 
 a[href^="tel:"]:after, a[href^="https://wa.me"]:after {
@@ -245,6 +326,7 @@ a[href^="tel:"]:after, a[href^="https://wa.me"]:after {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
   opacity: 0;
   transition: opacity 0.8s ease;
+  z-index: 0;
 }
 
 a[href^="tel:"]:hover:after, a[href^="https://wa.me"]:hover:after {
@@ -254,8 +336,55 @@ a[href^="tel:"]:hover:after, a[href^="https://wa.me"]:hover:after {
 /* Aplicar animación pulsante a los botones en el hero y CTA */
 .bg-hero-pattern a[href^="tel:"], 
 .bg-hero-pattern a[href^="https://wa.me"] {
-  animation: pulse 2s infinite;
-  animation-delay: 0.5s;
+  /* Quitamos la animación constante */
+  /*animation: pulse 2s infinite;
+  animation-delay: 0.5s;*/
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Añadimos efectos modernos al hover */
+.bg-hero-pattern a[href^="tel:"]:hover, 
+.bg-hero-pattern a[href^="https://wa.me"]:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Efecto de brillo al hover */
+.bg-hero-pattern a[href^="tel:"]:before,
+.bg-hero-pattern a[href^="https://wa.me"]:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.8s ease;
+  z-index: 0;
+}
+
+.bg-hero-pattern a[href^="tel:"]:hover:before,
+.bg-hero-pattern a[href^="https://wa.me"]:hover:before {
+  opacity: 1;
+  transform: rotate(45deg) translateX(100%);
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Efecto de ondas al hacer clic */
+.bg-hero-pattern a[href^="tel:"]:active,
+.bg-hero-pattern a[href^="https://wa.me"]:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 8px 15px -5px rgba(0, 0, 0, 0.1), 0 5px 5px -5px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
 }
 
 /* Estilos para el menú móvil */
