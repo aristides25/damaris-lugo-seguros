@@ -34,13 +34,14 @@ html {
 .profile-image-container {
   position: relative;
   overflow: hidden;
-  border-radius: 50% !important;
+  border-radius: 50%;
   cursor: pointer;
   width: 260px;
   height: 260px;
   margin: 0;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   aspect-ratio: 1 / 1; /* Asegura que el contenedor sea cuadrado */
+  display: block; /* Garantiza que el contenedor sea un bloque */
 }
 
 .profile-image {
@@ -50,6 +51,7 @@ html {
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
+  display: block; /* Asegura que la imagen sea un bloque */
 }
 
 .profile-image-container::before {
@@ -57,35 +59,33 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0) 0%, rgba(16, 185, 129, 0.3) 100%);
-  opacity: 0;
-  z-index: 1;
-  transition: opacity 0.8s ease;
-  border-radius: 50% !important;
   width: 100%;
   height: 100%;
+  background: radial-gradient(circle at center, rgba(16, 185, 129, 0) 30%, rgba(16, 185, 129, 0.5) 100%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .profile-image-container::after {
   content: 'Experta en Seguros';
   position: absolute;
-  bottom: 10%;
+  bottom: 0;
   left: 0;
-  right: 0;
-  padding: 10px;
+  width: 100%;
+  padding: 40px 0 15px 0;
   color: white;
   font-weight: bold;
   text-align: center;
   opacity: 0;
   transition: opacity 0.8s ease, transform 0.8s ease;
   z-index: 2;
-  width: 100%;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(to top, rgba(16, 185, 129, 0.8), rgba(16, 185, 129, 0));
+  background: linear-gradient(to top, rgba(16, 185, 129, 0.9) 0%, rgba(16, 185, 129, 0.7) 40%, rgba(16, 185, 129, 0) 100%);
   transform: translateY(10px);
-  border-radius: 0 0 150px 150px;
+  pointer-events: none;
 }
 
 .profile-image-container:hover .profile-image {
@@ -564,6 +564,7 @@ img:hover {
     width: 200px;
     height: 200px;
     aspect-ratio: 1 / 1; /* Asegura que el contenedor sea cuadrado en móvil */
+    display: block;
   }
   
   .item-hover-effect:hover {
@@ -605,4 +606,6 @@ header.bg-hero-pattern {
 .animate-element.flex.justify-center {
   background: transparent !important;
   overflow: visible;
+  position: relative;
+  z-index: 1;
 } 
